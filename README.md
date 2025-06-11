@@ -117,12 +117,6 @@ Edit
 
 ---
 
-You can copy and paste this directly into a `README.md` file in your repository.
-
-Let me know if you'd like a [PDF version](f) or a [custom badge or banner](f) for the GitHub project page!
-
-
-
 
 
 
