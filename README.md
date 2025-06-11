@@ -92,26 +92,7 @@ Feature scaling with StandardScaler
 Target variables: Performance Score, Attrition Risk 
 ---
 
-## ➤ Regression Model (Linear Regression)
-Predicts Performance Score
-
-Evaluated using R² score and Mean Squared Error
-
-Visualized with scatterplot of Actual vs Predicted
-
-➤ Classification Model (Random Forest)
-Predicts Attrition Risk
-
-Evaluated using Confusion Matrix and Classification Report
-
-Visualized with seaborn heatmap and confusion matrix plot
-
-➤ SHAP Model Explainability
-SHAP values computed on Random Forest model
-
-Summary beeswarm plot shows feature impact on predictions
-
-📊 Results & Visualizations
+## 📊 Results & Visualizations
 ✅ Performance Score: R² ≈ 0.87, MSE ≈ 90
 
 ✅ Attrition Prediction: Balanced precision, recall
@@ -120,19 +101,14 @@ Summary beeswarm plot shows feature impact on predictions
 
 📉 Visual Tools: Scatterplots, Confusion Matrix, SHAP Beeswarm
 
-🔮 Future Scope
+## 🔮 Future Scope
 Integration with HRMS dashboards
 
 Web-based deployment using Streamlit or Flask
 
 Use real HR data for enhanced prediction accuracy
 
-Add time-series component for tracking performance trends
-
-🔗 GitHub Link
-👉 Click to view the full project
-
-📜 License
+## 📜 License
 This project is open-source and available under the MIT License.
 
 yaml
