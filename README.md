@@ -89,9 +89,10 @@ Encoding categorical variables via pd.get_dummies
 
 Feature scaling with StandardScaler
 
-Target variables: Performance Score, Attrition Risk
+Target variables: Performance Score, Attrition Risk 
+---
 
-➤ Regression Model (Linear Regression)
+## ➤ Regression Model (Linear Regression)
 Predicts Performance Score
 
 Evaluated using R² score and Mean Squared Error
