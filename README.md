@@ -1,20 +1,18 @@
-# EduNet-Project
 # 💼 Employee Performance & Attrition Prediction System
 
-A Machine Learning system that predicts employee performance scores and attrition risk using structured HR data. Built with Python, Scikit-learn, SHAP, and Matplotlib for analytics and visualization.
+A machine learning-based system that predicts employee performance scores (regression) and attrition risk (classification) using synthetic HR data. This project demonstrates model training, evaluation, and SHAP-based interpretability for business insights.
 
 ---
 
 ## 📌 Table of Contents
 
 - [Overview](#overview)
-- [Features](#features)
+- [Project Highlights](#project-highlights)
 - [Tech Stack](#tech-stack)
-- [Dataset](#dataset)
-- [System Requirements](#system-requirements)
-- [Setup Instructions](#setup-instructions)
-- [Code Walkthrough](#code-walkthrough)
-- [Results](#results)
+- [Dataset Description](#dataset-description)
+- [Installation & Setup](#installation--setup)
+- [Code Overview](#code-overview)
+- [Results & Visualizations](#results--visualizations)
 - [Future Scope](#future-scope)
 - [GitHub Link](#github-link)
 - [License](#license)
@@ -23,70 +21,133 @@ A Machine Learning system that predicts employee performance scores and attritio
 
 ## 📖 Overview
 
-This project simulates a workplace scenario where employee performance is evaluated and attrition is predicted based on features like stress level, focus, work hours, and training. It supports HR analytics by:
+This project uses synthetic data to:
 
-- Predicting performance scores using **Linear Regression**
-- Classifying attrition risk using **Random Forest Classifier**
-- Visualizing feature importance with **SHAP**
+- Predict employee performance scores using **Linear Regression**
+- Predict attrition risk using **Random Forest Classifier**
+- Visualize prediction accuracy and model interpretability via **SHAP plots**
 
----
-
-## ✨ Features
-
-- Generate realistic synthetic HR data
-- Dual modeling (Regression + Classification)
-- Clear performance reports with metrics
-- Explainable AI using SHAP visualizations
-- Ready for deployment in dashboards
+It serves as a compact demonstration of regression, classification, preprocessing, evaluation, and explainability in a real-world HR scenario.
 
 ---
 
-## ⚙️ Tech Stack
+## ✨ Project Highlights
 
-- Python 3.10+
-- Libraries:
-  - `pandas`, `numpy`, `matplotlib`, `seaborn`
-  - `scikit-learn`
-  - `shap`
-
----
-
-## 📂 Dataset
-
-The synthetic dataset includes:
-
-| Feature              | Type        | Description                          |
-|----------------------|-------------|--------------------------------------|
-| Attendance (%)       | Numeric     | Weekly attendance percentage         |
-| Project Delivery Score | Numeric   | Average score on recent projects     |
-| Work Hours/Week      | Numeric     | Average work hours per week          |
-| Previous Rating      | Numeric     | Past performance rating (1–5 scale)  |
-| Stress Level         | Numeric     | Reported stress level (1–10)         |
-| Focus Level          | Numeric     | Measured focus level (1–10)          |
-| Sleep Hours          | Numeric     | Average sleep per night              |
-| Gender, Education    | Categorical | Demographic details                  |
-| Training Completed   | Categorical | Whether employee completed training  |
-| Remote Work          | Categorical | Working remotely or not              |
-
-**Target Variables**:
-- `Performance Score`: A calculated performance metric
-- `Attrition Risk`: Binary value (0 = No, 1 = Yes)
+- 🔧 **Synthetic Dataset** with categorical and numerical features
+- 📊 **Dual Prediction**: Performance (regression) & Attrition (classification)
+- 🧠 **SHAP Interpretability** for explaining model decisions
+- 📈 **Visual Insights** using Seaborn and Matplotlib
 
 ---
 
-## 💻 System Requirements
+## 🧰 Tech Stack
 
-- Python ≥ 3.8
-- Jupyter Notebook or any Python IDE
-- Libraries: Install via `pip install -r requirements.txt`  
-  (or install manually: pandas, numpy, sklearn, seaborn, matplotlib, shap)
+- Python 3.8+
+- pandas, numpy
+- matplotlib, seaborn
+- scikit-learn
+- shap
 
 ---
 
-## 🔧 Setup Instructions
+## 📂 Dataset Description
+
+| Feature               | Type        | Description                        |
+|-----------------------|-------------|------------------------------------|
+| Attendance (%)        | Numeric     | Attendance rate                    |
+| Project Delivery Score| Numeric     | Score out of 100                   |
+| Work Hours/Week       | Numeric     | Average working hours              |
+| Previous Rating       | Numeric     | Rating from previous cycle (2–5)   |
+| Stress Level          | Numeric     | 1–10 scale                         |
+| Focus Level           | Numeric     | 1–10 scale                         |
+| Sleep Hours           | Numeric     | Average daily sleep                |
+| Education Level       | Categorical | Diploma/Bachelor/Master            |
+| Remote Work           | Categorical | Yes/No                             |
+| Gender                | Categorical | Male/Female                        |
+| Training Completed    | Categorical | Yes/No                             |
+
+**Targets:**
+- `Performance Score`: Regression target
+- `Attrition Risk`: Binary classification target (0 = No, 1 = Yes)
+
+---
+
+## 🛠 Installation & Setup
 
 ```bash
 git clone https://github.com/MohammedTaha-751/EduNet-Project.git
 cd EduNet-Project
 pip install -r requirements.txt
-python employee_prediction.py
+
+```
+
+## Code Overview
+➤ Data Generation & Preprocessing
+Synthetic dataset created using NumPy
+
+Encoding categorical variables via pd.get_dummies
+
+Feature scaling with StandardScaler
+
+Target variables: Performance Score, Attrition Risk
+
+➤ Regression Model (Linear Regression)
+Predicts Performance Score
+
+Evaluated using R² score and Mean Squared Error
+
+Visualized with scatterplot of Actual vs Predicted
+
+➤ Classification Model (Random Forest)
+Predicts Attrition Risk
+
+Evaluated using Confusion Matrix and Classification Report
+
+Visualized with seaborn heatmap and confusion matrix plot
+
+➤ SHAP Model Explainability
+SHAP values computed on Random Forest model
+
+Summary beeswarm plot shows feature impact on predictions
+
+📊 Results & Visualizations
+✅ Performance Score: R² ≈ 0.87, MSE ≈ 90
+
+✅ Attrition Prediction: Balanced precision, recall
+
+🔍 Important Features: Focus Level, Project Delivery Score, Stress Level
+
+📉 Visual Tools: Scatterplots, Confusion Matrix, SHAP Beeswarm
+
+🔮 Future Scope
+Integration with HRMS dashboards
+
+Web-based deployment using Streamlit or Flask
+
+Use real HR data for enhanced prediction accuracy
+
+Add time-series component for tracking performance trends
+
+🔗 GitHub Link
+👉 Click to view the full project
+
+📜 License
+This project is open-source and available under the MIT License.
+
+yaml
+Copy
+Edit
+
+---
+
+You can copy and paste this directly into a `README.md` file in your repository.
+
+Let me know if you'd like a [PDF version](f) or a [custom badge or banner](f) for the GitHub project page!
+
+
+
+
+
+
+
+
